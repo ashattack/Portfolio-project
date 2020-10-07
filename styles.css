@@ -38,5 +38,14 @@ body {
 }
 
 main {
-    color: gray;
+    color: black;
+    text-align: center;
+    
 }
+
+.boxed {
+    border: 1px solid black;
+    width: 500px;
+    background-color:  #bfbfbf;
+}
+
