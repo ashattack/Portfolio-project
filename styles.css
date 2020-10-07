@@ -86,3 +86,8 @@ width: 200px;
     margin-top: 10px;
   }
 
+  #name {
+      color: black;
+      font-size: 20px;
+  }
+
