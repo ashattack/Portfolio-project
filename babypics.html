@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<title>M.A Photography</title>
+
+		
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="bootstrap.css"
+		      />
+
+		
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="styles.css"
+              />	
+        
+
+		
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+        <a class="active" href="gallery.html">
+            Go Back
+        </a>
+	<div class="container">
+		<h1>New Borns and Toddlers</h1>
+
+		
+		<div class="row">
+			<div class="col-md-3">
+                <img id="image1" class="crop-img" 
+				  src="image_1.jpg" 
+				  alt="A baby smiling"/> 
+			</div>
+			<div class="col-md-3">
+                <img id="image2" class="crop-img" 
+				  src="image_2.jpg" 
+				  alt="A baby laying down"/> 
+			</div>
+			<div class="col-md-3">
+                <img id="image3" class="crop-img" 
+				  src="image_3.jpg" 
+				  alt="A mom holding her baby in the air"/> 
+			</div>
+			<div class="col-md-3">
+                <img id="image4" class="crop-img" 
+				   src="image_4.jpg" 
+				   alt="A dad with his baby"/> 
+			</div>
+		</div>
+		<!--
+			this is the large image which is
+			on a row of its own. 
+			I will change it's source in the 
+			javascript
+		-->
+		<div class="row">
+			<div class="col-md-1">
+                <button id="backward">&lt;</button>
+            </div>
+            <div class="col-md-10">
+				<img id="bigImage" 
+				  class="large-img" 
+				  src="image_5.jpg" 
+				  alt="Parents admiring their baby"/> 
+            </div>
+            <div class="col-md-1">
+                <button id="forward">&gt;</button>
+            </div>
+		</div>
+	
+
+	<script>
+
+        var paused = false;
+		
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+
+        var counter = 1;
+        $("#image"+counter).click();
+
+$("#backward").click(function (){
+    counter = counter - 1;
+    if(counter < 1){
+        counter = 4;
+    }
+    
+    $("#image"+counter).click();
+});
+
+$("#forward").click(function (){
+    counter = counter + 1;
+    if(counter > 4){
+        counter = 1;
+    }
+
+    $("#image"+counter).click();
+});
+
+$("#bigImage").click(function (){
+    paused = !paused;
+});
+
+setInterval(function (){
+    if(!paused){
+        $("#forward").click();
+    };
+}, 3000);
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+

@@ -43,9 +43,46 @@ main {
     
 }
 
+h1 {
+    color: black;
+}
+
 .boxed {
     border: 1px solid black;
     width: 500px;
     background-color:  #bfbfbf;
 }
+.links {
+background-color: gray;
+box-shadow: 0 5px 0 black;
+color: white;
+padding: 1em 1.5em;
+position: relative;
+text-decoration: none;
+display: block;
+width: 200px;
+}
+
+.links:hover{
+    background-color: pink;
+    cursor: pointer;
+}
+
+.links:active {
+    box-shadow: none;
+    top: 5px;
+}
+
+
+
+.crop-img{
+    max-height:150px;
+    max-width:100%;
+    margin-bottom: 10px;
+  }
+  
+  .large-img{
+    max-width:100%;
+    margin-top: 10px;
+  }
 
